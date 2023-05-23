@@ -1,0 +1,15 @@
+body {
+    margin: 4rem 6rem;
+}
+
+/* Navbar */
+
+.nav-item {
+    margin-left: 1.5rem;
+}
+
+.collapse{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
