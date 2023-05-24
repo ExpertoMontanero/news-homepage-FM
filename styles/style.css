@@ -1,15 +1,49 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
 body {
-    margin: 4rem 6rem;
+    font-family: 'Inter', sans-serif;
+    margin-top: clamp(0.5rem, 4.5vw, 4rem);
+    margin-left: clamp(0.5rem, 4.5vw, 6rem);
+    margin-right: clamp(0.5rem, 4.5vw, 6rem);
+    
 }
 
 /* Navbar */
 
 .nav-item {
     margin-left: 1.5rem;
+    font-size: clamp(1em, 1vw, 1.5em);
 }
 
-.collapse{
+.collapse {
     display: flex;
     justify-content: end;
     margin-top: 1rem;
+}
+
+.navbar-toggler,
+.navbar-toggler:hover,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.greyBg{
+    background-color: #00000069;
+}
+.navbar-toggler-icon {
+    background-color: #fff;
+    background-image: url("/assets/images/icon-menu.svg");
+    border: none;
+}
+
+.navbar-toggler-icon {
+    width: 2em;
+    height: 1em;
+}
+
+#menuItems {
+    margin-bottom: 0.5em;
 }
