@@ -1,12 +1,11 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
     margin-top: clamp(0.5rem, 4.5vw, 4rem);
-    margin-left: clamp(0.5rem, 4.5vw, 6rem);
-    margin-right: clamp(0.5rem, 4.5vw, 6rem);
-    
+    margin-left: clamp(0.5rem, 5vw, 8rem);
+    margin-right: clamp(0.5rem, 5vw, 8rem);
 }
 
 /* Navbar */
@@ -30,20 +29,67 @@ body {
     border: none;
 }
 
-.greyBg{
-    background-color: #00000069;
-}
-.navbar-toggler-icon {
-    background-color: #fff;
-    background-image: url("/assets/images/icon-menu.svg");
-    border: none;
+.greyBg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .navbar-toggler-icon {
+    border: none;
+    z-index: 2;
+    position: relative;
+}
+
+.ham {
+    background-image: url("/assets/images/icon-menu.svg");
     width: 2em;
-    height: 1em;
+}
+
+.cross {
+    background-image: url("/assets/images/icon-menu-close.svg");
 }
 
 #menuItems {
     margin-bottom: 0.5em;
+}
+
+.navbar-collapse {
+    background-color: #fff;
+    width: 100px;
+}
+
+
+@media (max-width:768px) {
+    .navbar-collapse {
+        position: fixed;
+        padding-top: 6em;
+        margin: 0;
+        top: 0;
+        right: 0;
+        width: 65%;
+        height: 100%;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+    .nav-link{
+        font-size: 1.2em;
+        font-weight:500;
+        color: hsl(240, 100%, 5%);
+        line-height: 1.7;
+    }
+    .navbar-nav{
+        margin-top: 3em;
+    }
+    #logo{
+        height: 2em;
+    }
+}
+
+
+@media (min-width:768px) {
+    .greyBg {
+        background: none;
+    }
 }
